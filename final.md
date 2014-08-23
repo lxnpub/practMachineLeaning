@@ -12,9 +12,9 @@ output:
 
 ### Executive summary
 
-This project analyze a data set collected from measurement devices attached on 6 participants 
+This project analyses a data set collected from measurement devices attached on 6 participants 
 while they are doing weight lifting exercises, then proceeds to build a series of random forest
-models to predict the manner in which they did the exercise. A k-fold (k=10) corss validation
+models to predict the manner in which they did the exercise. A k-fold (k=10) cross validation
 is performed on the subdivisions of the training data; the missclassification rates and OOB
 error rates are calculated for each fold step; a final model is selected based these rates;
 and the final model is used to precdict 20 different test cases.
@@ -49,9 +49,9 @@ library(caret)
 library(randomForest)
 library(verification)
 
-mf_train <- read.csv("pml-training.csv", head=TRUE, stringsAsFactors=F,
+mf_train <- read.csv("../pml-training.csv", head=TRUE, stringsAsFactors=F,
                      na.strings=c("NA", "", " ", "#DIV/0!"))
-mf_test <- read.csv("pml-testing.csv", head=TRUE, stringsAsFactors=F,
+mf_test <- read.csv("../pml-testing.csv", head=TRUE, stringsAsFactors=F,
                     na.strings=c("NA", "", " ", "#DIV/0!"))
 ```
 
